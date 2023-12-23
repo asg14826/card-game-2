@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game-2</title>
+</head>
+<body>
+    <img id="myCards" src="" alt="" style="height: 200px; width: 200px;">
+    <hr>
+    <img id="computerCards" src=" " alt="" style="height: 200px; width: 200px;">
+
+    <script>
+
+        let myCards = parseInt(prompt("choose your wepon"))
+        let computerCards = parseInt(Math.random() *3) 
+
+        switch(myCards){
+            case 0: document.getElementById("myCards").src = 'images2/0_.jpg'
+                break;
+            case 1:  document.getElementById("myCards").src = 'images2/1_.jpg'
+                break;  
+            case 2:  document.getElementById("myCards").src = 'images2/2_.jpg'
+                break;
+            default:
+                document.write("out of range")
+
+        }
+
+        switch(computerCards){
+            case 0: document.getElementById("computerCards").src = 'images2/0_.jpg'
+                break;
+            case 1:  document.getElementById("computerCards").src = 'images2/1_.jpg'
+                break;  
+            case 2:  document.getElementById("computerCards").src = 'images2/2_.jpg'
+                brake;
+            default:
+                document.write("out of range")
+        }
+
+        document.write("<br>")
+
+
+        if(myCards > computerCards){
+            document.write("you won")
+        }else if(myCards < computerCards){
+            document.write("computer won")
+        }else if (myCards == computerCards){
+            document.write("equal")
+        }
+    </script>
+</body>
+</html>
